@@ -1,0 +1,71 @@
+body {
+  padding: 0 50px;
+  background-image: url(fondosong.png);
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  margin: 0;
+  color:hwb(0 100% 0%);
+  font-family: "SigmarOne";
+  font-size: 3rem;
+  text-transform: capitalize;
+  text-shadow: 3px 3px black;
+}
+
+strong {
+  padding: 0 10px;
+  background-color: white;
+  color: rgb(212, 0, 255);
+}
+
+
+img {
+  border: hwb(210 50% 30%) 5px solid;
+  padding: 5px;
+}
+
+img.izquierda {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+p.izquierda {
+  float: left;
+  text-align: center;
+  width: 33%;
+  background-color: hwb(233 0% 71%);
+  color: hwb(0 100% 0%);
+}
+
+hr.arriba {
+  clear: both;
+  width: 66%;
+  height: 10px;
+  border: black 2px solid;
+  border-radius: 5px;
+  margin: 40px auto;
+  background-color: hwb(30 11% 3%);
+}
+
+hr.abajo {
+  clear: both;
+  width: 66%;
+  height: 10px;
+  border: black 2px solid;
+  border-radius: 5px;
+  margin: 40px auto;
+  background-color: hwb(253 0% 31%);
+}
