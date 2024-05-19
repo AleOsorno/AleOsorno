@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+summary{
+    font-size: 500%;
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    padding: 25px 0;
+}
+
+nav a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    margin: 5px 15px;
+    border-radius: 30px;
+}
+
+nav a:hover{
+    background-color: white;
+    color: black;
+}
+
+.encabezado{
+    background-image: url(imgfondo/fotografia-silueta-arboles-cielo-azul-hora-dorada.jpg);
+    height: 1000px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.encabezado p{
+    font-size: 30px;
+    font-family: "Lalezar", system-ui;
+}
+
+.encabezado h1{
+    font-size: 50px;
+    padding: 20px;
+    font-family: "Secular One", sans-serif;
+}
+
+.contenido_menu{
+   grid-template-columns: 1fr auto;
+   align-items: center;
+   background: rgb(0, 0, 0);
+   font-family: sans-serif;
+   position:fixed;
+   top:0;
+   height: 80px;
+   width: 100%;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{ /*EL SIGNO DE MAYOR QUE ES COMO DECIR QUE LA PROPIEDAD SE APLIQUE DAL UL DESPUES DEL NAV*/
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: center; /*ALINEAR AL CENTRO TODO*/
+    padding: 14px; /*ESPACIADO*/
+    text-transform: uppercase; /*TRANSFORMAR EN MAYUSCULAS*/
+    font-size: 14px; /*TAMAÑO DE LETRA*/
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover{/*EVENTO DE NOMBRE HOVER QUE SE REFIERE A CUANDO SE INTERACTUA CON EL ELEMENTO CORRESPONDIENTE*/
+    transform: scale(1.1); /*TRANSFORMARSE EN UNA ESCALA DE 1.1*/
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);/*SOMBRA DE FONDO CUANDO INTERACTUAMOS CON EL ELEMENTO*/
+}
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;/*QUE EL SUBMENU VAYA EN COLUMNA*/
+    background-color: rgb(0, 72, 255);
+    position: absolute; /*posicion absoluta*/
+    top: 90px;
+    left: -4px;
+    padding: 14px 0px 0px 0px;
+    visibility: hidden; /*OCULTO*/
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: all 300ms
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content: white;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;   
+}
+
+nav ul li ul li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+
+nav ul li ul li a:hover{
+    background-color: rgb(0, 213, 255);
+    color: black;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.fondo1 h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fondo1 summary{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+}
+
+.fondo1{
+    background-color: white;
+    height: 600px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+}
+
+.centra{
+    padding: 10px 170px 10px 170px;
+    text-align: center;
+}
+
+.fondo2{
+    background-color: rgb(0, 0, 0);
+    height: 1150px;
+    color: rgb(255, 255, 255);
+}
+
+.pa{
+    padding: 90px 180px 140px 180px; /*Arriba, derecha, abajo, izquierda*/
+    font-family: "Denk One", sans-serif;
+    font-size: 20px;
+    text-align: center
+}
+
+.pa2{
+    padding: 80px 190px 140px 180px;
+    font-family: "Denk One", sans-serif;
+    font-size: 20px;
+    text-align: center
+}
+
+.pa3{
+    padding: 130px 190px 90px 180px;
+    font-family: "Denk One", sans-serif;
+    font-size: 20px;
+    text-align: center
+}
+
+.imagder{
+    float: right;
+    width: 400px;
+    height: 300px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 1);/*Horizontal, verticla, desenfoque, extension y color*/
+}
+
+.imagizq{
+    float: left;
+    width: 400px;
+    height: 300px;
+    margin: 60px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 1);
+}
+
+.fondo3{
+    background-color: white;
+    text-align: center;
+    color: black;
+    padding: 20px 60px 20px 60px;
+}
+
+.fondo3 h2{
+    font-family: "Suez One", serif;
+    font-size: 40px;
+}
+
+.fondo3 th{
+    background-color: rgb(154, 146, 146);
+}
+
+.fondo5{
+    background-color: #180006;
+    color: rgb(255, 255, 255);
+    padding: 30px 200px 30px 200px;
+}
+
+.fondo5 h2{
+    text-align: center;
+    color: white;
+    font-family: "Suez One", serif;
+    font-size: 40px;
+}
+
+.fondo6{
+    text-align: center;
+    color: white;
+    background-color: #02130d;
+    padding: 30px 80px 30px 80px;
+}
+
+.fondo6 summary{
+    font-family: "Modak", system-ui;
+}
+
+.fondo6 p{
+    font-family: "DM Serif Text", serif;
+    font-size: 200%;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+.fondo4{
+    height: 120vh;
+    background: rgb(255, 255, 255);
+    transition: all 0.5s;
+}
+
+.fondo4.color{
+        background-color: royalblue;
+}
+
+.fondo4.color2{
+    background-color: mediumorchid;
+}
+
+.fondo4.color3{
+    background-color: teal;
+}
+
+.fondo4 .js{
+    padding-top: 25%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.fondo4 p{
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.fondo4 select{
+    border-radius: 20px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.fondo4 .js.mov {
+    padding-top: 2%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.fondo4 .js p{
+    margin-right: 2px;
+}
+
+.fondo4 .js .tabla{
+    display: none;
+}
+
+.fondo4 .js .tabla2{
+    display: none;
+}
+
+.fondo4 .js .tabla3{
+    display: none;
+}
+
+.fondo4 .js .tabla.mostrar{
+    display: inline;
+}
+
+.fondo4 .js .tabla2.mostrar2{
+    display: inline;
+}
+
+.fondo4 .js .tabla3.mostrar3{
+    display: inline;
+}
+
+.fondo4 .js .ifra{
+    display: none;
+}
+
+.fondo4 .js .ifra.aparecer{
+    display: inline;
+    height: 700px;
+    width: 90%;
+}
+
+button{
+    margin: 8px 2px;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+
+.presiona{
+    margin: 8px 2px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: none;
+    padding: 5px 8px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
