@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición de imagen con CSS</title>
+    <style>
+
+        body{
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        /* Estilos básicos para la imagen */
+        .imagen {
+            width: 200px; /* Ancho inicial */
+            transition: width 0.5s; /* Transición suave */
+        }
+
+        /* Cambio de tamaño al hacer hover */
+        .imagen:hover {
+            width: 300px; /* Ancho al hacer hover */
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: white;
+        }
+
+        a:link{
+            color: white;
+        }
+
+        .posicion{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .boton{
+            text-align: center;
+            background-color: rgb(6, 6, 112);
+            margin: 20px 0px 20px 750px;
+            padding: 10px;
+            width: 90px;
+            font-size: 18px;
+            box-shadow: 0 0 10px 5px rgb(245, 133, 14);
+            color: white;
+            transition: all 300ms;
+        }
+
+        .boton:hover{
+            background-color: orange;
+            box-shadow: 0 0 10px 5px rgb(6, 6, 112);
+            transform: scale(1.4);
+            color: black;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <h1>Transición de imagen con CSS</h1>
+
+    <!-- Imagen con clase "imagen" -->
+    <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo" class="imagen">
+    <h1>Menú Interactivo.</h1>
+    <div class="posicion">
+        <div class="boton"><a href="http://www.upslp.edu.mx">Nosotros</a></div>
+        <div class="boton"><a href="http://www.upslp.edu.mx">Aspirantes</a></div>
+        <div class="boton"><a href="http://www.upslp.edu.mx">Estudiantes</a></div>
+        <div class="boton"><a href="http://www.upslp.edu.mx">Docentes</a></div>
+        <div class="boton"><a href="http://www.upslp.edu.mx">Egresados</a></div>
+        <div class="boton"><a href="mailto:185085@upslp.edu.mx">Contacto</a></div>
+    </div>
+</body>
+</html>
