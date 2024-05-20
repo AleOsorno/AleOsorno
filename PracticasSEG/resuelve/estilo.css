@@ -1,0 +1,36 @@
+/*cuerpo de la pagina*/
+*{
+    background-color: hwb(35 80% 0%);
+    font-family: sans-serif;
+  }
+  
+  /*encabezado nivel 1*/
+  h1{
+    color: hwb(35 0% 40%);
+    text-transform: uppercase;
+  }
+  
+  /*parrafos*/
+  p{
+    font-size: 2rem;
+  }
+  
+  /*parrafos de la clase intro*/
+  p.intro{
+    color: hwb(35 0% 0%);
+  }
+  
+  /*elementos summary*/
+  summary{
+    font-size: 4rem;
+  }
+  
+  /*pseudo clase par de la etiqueta span*/
+  span.par {
+    background-color: white;
+  }
+  
+  /*pseudo clase impar de la etiqueta span*/
+  span.impar {
+    background-color: hwb(325 80% 0%);
+  }
