@@ -173,59 +173,59 @@ function P39(){
     document.getElementById("cambiante").src = "PracticasSEG/menuprueba.html";
 }
 function P40(){
-    document.getElementById("cambiante").src = "PracticasTer/0_Practica_Inicial.html";
+    document.getElementById("cambiante").src = "PracticasTER/0_Practica_Inicial.html";
 }
 function P41(){
-    document.getElementById("cambiante").src = "PracticasTer/1_Generador_parrafos.html";
+    document.getElementById("cambiante").src = "PracticasTER/1_Generador_parrafos.html";
 }
 function P42(){
-    document.getElementById("cambiante").src = "PracticasTer/2_Generador_Fila_Col.html";
+    document.getElementById("cambiante").src = "PracticasTER/2_Generador_Fila_Col.html";
 }
 function P43(){
-    document.getElementById("cambiante").src = "PracticasTer/3_Ejercicio_tabla_Solicitado.html";
+    document.getElementById("cambiante").src = "PracticasTER/3_Ejercicio_tabla_Solicitado.html";
 }
 function P44(){
-    document.getElementById("cambiante").src = "PracticasTer/4_Aleatorios.html";
+    document.getElementById("cambiante").src = "PracticasTER/4_Aleatorios.html";
 }
 function P45(){
-    document.getElementById("cambiante").src = "PracticasTer/5_Ejercicio_contra.html";
+    document.getElementById("cambiante").src = "PracticasTER/5_Ejercicio_contra.html";
 }
 function P46(){
-    document.getElementById("cambiante").src = "PracticasTer/6_Grados.html";
+    document.getElementById("cambiante").src = "PracticasTER/6_Grados.html";
 }
 function P47(){
-    document.getElementById("cambiante").src = "PracticasTer/7_Arreglos.html";
+    document.getElementById("cambiante").src = "PracticasTER/7_Arreglos.html";
 }
 function P48(){
-    document.getElementById("cambiante").src = "PracticasTer/8_Geolocalizacion.html";
+    document.getElementById("cambiante").src = "PracticasTER/8_Geolocalizacion.html";
 }
 function P49(){
-    document.getElementById("cambiante").src = "PracticasTer/9_Geolocalizacion_mapa.html";
+    document.getElementById("cambiante").src = "PracticasTER/9_Geolocalizacion_mapa.html";
 }
 function P50(){
-    document.getElementById("cambiante").src = "PracticasTer/10_codigo_modulo3.html";
+    document.getElementById("cambiante").src = "PracticasTER/10_codigo_modulo3.html";
 }
 function P51(){
-    document.getElementById("cambiante").src = "PracticasTer/11_Canva.html";
+    document.getElementById("cambiante").src = "PracticasTER/11_Canva.html";
 }
 function P52(){
-    document.getElementById("cambiante").src = "PracticasTer/12_Graficas1.html";
+    document.getElementById("cambiante").src = "PracticasTER/12_Graficas1.html";
 }
 function P53(){
-    document.getElementById("cambiante").src = "PracticasTer/13_Graficas2.html";
+    document.getElementById("cambiante").src = "PracticasTER/13_Graficas2.html";
 }
 function P54(){
-    document.getElementById("cambiante").src = "PracticasTer/14_Graficas3.html";
+    document.getElementById("cambiante").src = "PracticasTER/14_Graficas3.html";
 }
 function P55(){
-    document.getElementById("cambiante").src = "PracticasTer/15_Graficas4.html";
+    document.getElementById("cambiante").src = "PracticasTER/15_Graficas4.html";
 }
 function P56(){
-    document.getElementById("cambiante").src = "PracticasTer/16_testalumno.html";
+    document.getElementById("cambiante").src = "PracticasTER/16_testalumno.html";
 }
 function P57(){
-    document.getElementById("cambiante").src = "PracticasTer/pdf/17_testpdf.html";
+    document.getElementById("cambiante").src = "PracticasTER/pdf/17_testpdf.html";
 }
 function P58(){
-    document.getElementById("cambiante").src = "PracticasTer/pdf/retopdf2.1.html";
+    document.getElementById("cambiante").src = "PracticasTER/pdf/retopdf2.1.html";
 }
