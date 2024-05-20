@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Conversiones</title>
+
+    <style>
+
+      div{
+          border: 2px solid;
+          border-color: rgb(0, 0, 0);
+          text-align: center;
+      }
+    </style>
+
+    <script type = "text/javascript">
+      function alertName(){
+          var g=parseFloat(document.forms[0].grados.value);
+          var op= document.forms[0].opcion.value;
+          var conversion;
+
+          if(op==1){
+            conversion = g+273.15;
+            document.write("<h1>Tabla de conversiones</h1>");
+            document.write("<table border=1>");
+              document.write("<tr>");
+              document.write("<th>Grados celsius: "+g+"</th>");
+              document.write("</tr>");
+              document.write("<tr>");
+              document.write("<th>Kelvin: "+conversion+"</th>");
+              document.write("</tr>");
+            document.write("</table>");
+          }else if(op==2){
+            conversion = (g*9/5)+32;
+            document.write("<h1>Tabla de conversiones</h1>");
+            document.write("<table border= 1>");
+              document.write("<tr>");
+              document.write("<th>Grados celsius: "+g+"</th>");
+              document.write("</tr>");
+              document.write("<tr>");
+              document.write("<th>Farenheit: "+conversion+"</th>");
+              document.write("</tr>");
+            document.write("</table>");
+          }
+
+          return true;
+          }
+    </script>
+
+  </head>
+
+  <body style="background-color: cornsilk;">
+    <div>
+      <form id="myform" onsubmit="return alertName();">
+        <p>Grados C <input id="grados" name="grados" type="text"/></p>
+        <p>Conversion
+          <select name="opcion" id="opcion">
+            <option value="1">KELVIN</option>
+            <option value="2">FARENHEIT</option>
+          </select>
+        </p>
+        <p><input type="submit" /></p>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-menu</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(209, 170, 138);
+            color: rgb(255, 255, 255);
+        }
+        hr{
+            border: 3px solid;
+            border-color: white;
+            border-radius: 3px;
+            margin: 6px 60px; 
+        }
+        button{
+            margin: 14px 20px;
+            background-color: black;
+            cursor: pointer;
+            border: none;
+            padding: 16px 32px;
+            color: #FFF;
+            font-size: 12px;
+            font-weight: bold;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .s2::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,rgb(123, 0, 255),rgb(230, 6, 211),rgb(89, 0, 255),rgb(253, 1, 1),rgb(248, 79, 183),rgb(255, 0, 106),rgb(0, 224, 254),rgb(75, 0, 137));
+            background-size: 800%;
+            border-radius: 10px;
+            filter: blur(8px);
+            animation: glowing 20s linear infinite;
+        }
+
+        .s3::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,rgb(255, 0, 0),rgb(230, 96, 6),rgb(255, 166, 0),rgb(253, 207, 1),rgb(217, 255, 0),rgb(255, 0, 85),rgb(254, 0, 254),rgb(2, 137, 0));
+            background-size: 800%;
+            border-radius: 10px;
+            filter: blur(8px);
+            animation: glowing 20s linear infinite;
+        }
+
+        button::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,rgb(0, 81, 12),rgb(53, 177, 0),rgb(0, 255, 94),rgb(36, 85, 29),rgb(19, 161, 0),rgb(51, 255, 0),rgb(24, 255, 20),rgb(2, 137, 0));
+            background-size: 800%;
+            border-radius: 10px;
+            filter: blur(8px);
+            animation: glowing 20s linear infinite;
+        }
+
+        .s4::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,rgb(0, 17, 255),rgb(65, 98, 245),rgb(0, 119, 255),rgb(99, 190, 252),rgb(136, 215, 252),rgb(0, 247, 255),rgb(96, 255, 221),rgb(11, 223, 57));
+            background-size: 800%;
+            border-radius: 10px;
+            filter: blur(8px);
+            animation: glowing 20s linear infinite;
+        }
+
+        @keyframes glowing {
+                0%{
+                    background-position: 0 0;
+                }
+                
+                50%{
+                    background-position: 400% 0;
+                }
+
+                100%{
+                    background-position: 0 0;
+                }
+            }
+    </style>
+</head>
+<body>
+    <h1>Actividades de JavaScript</h1>
+    <h3>Osorno Beltrán Alejandro</h3>
+    <hr>
+    <button onclick="P0()">USO DE VARIABLES</button>
+    <button onclick="P1()">GENERADOR DE PARRAFOS</button>
+    <button onclick="P2()">IMPRESION DE TABLA</button>
+    <button onclick="P3()">TABLA CON CARACTER</button>
+    <button onclick="P4()">ALEATORIOS</button>
+    <button onclick="P5()">VALIDAR CONTRASEÑA</button>
+    <button onclick="P6()">CONVERTIDOR</button>
+    <button onclick="P7()">ARREGLOS</button>
+    <hr>
+    <button class="s2" onclick="P8()">GEOLOCALIZACION</button>
+    <button class="s2" onclick="P9()">GEO_MAPA</button>
+    <button class="s2" onclick="P10()">VOLUMEN_ALERT</button>
+    <button class="s2" onclick="P12()">GRAFICA1</button>
+    <button class="s2" onclick="P13()">GRAFICA2</button>
+    <button class="s2" onclick="P14()">GRAFICA3</button>
+    <button class="s2" onclick="P15()">GRAFICA4</button>
+    <hr>
+    <button class="s3" onclick="P11()">CANVA</button>
+    <button class="s3" onclick="P16()">TEST_ALUMNO</button>
+    <hr>
+    <button class="s4" onclick="P17()">TEST_ALUMNO_PDF</button>
+    <button class="s4" onclick="P18()">RETO_PDF_1</button>
+
+    <iframe id="cambiante" name="iframe_c" height="600px" width="100%" title="contenido"></iframe>
+
+    <script>
+        function P0(){
+            document.getElementById("cambiante").src = "0_Practica_Inicial.html";
+        }
+        function P1(){
+            document.getElementById("cambiante").src = "1_Generador_parrafos.html";
+        }
+        function P2(){
+            document.getElementById("cambiante").src = "2_Generador_Fila_Col.html";
+        }
+        function P3(){
+            document.getElementById("cambiante").src = "3_Ejercicio_tabla_Solicitado.html";
+        }
+        function P4(){
+            document.getElementById("cambiante").src = "4_Aleatorios.html";
+        }
+        function P5(){
+            document.getElementById("cambiante").src = "5_Ejercicio_contra.html";
+        }
+        function P6(){
+            document.getElementById("cambiante").src = "6_Grados.html";
+        }
+        function P7(){
+            document.getElementById("cambiante").src = "7_Arreglos.html";
+        }
+        function P8(){
+            document.getElementById("cambiante").src = "8_Geolocalizacion.html";
+        }
+        function P9(){
+            document.getElementById("cambiante").src = "9_Geolocalizacion_mapa.html";
+        }
+        function P10(){
+            document.getElementById("cambiante").src = "10_codigo_modulo3.html";
+        }
+        function P11(){
+            document.getElementById("cambiante").src = "11_Canva.html";
+        }
+        function P12(){
+            document.getElementById("cambiante").src = "12_Graficas1.html";
+        }
+        function P13(){
+            document.getElementById("cambiante").src = "13_Graficas2.html";
+        }
+        function P14(){
+            document.getElementById("cambiante").src = "14_Graficas3.html";
+        }
+        function P15(){
+            document.getElementById("cambiante").src = "15_Graficas4.html";
+        }
+        function P16(){
+            document.getElementById("cambiante").src = "16_testalumno.html";
+        }
+        function P17(){
+            document.getElementById("cambiante").src = "pdf/17_testpdf.html";
+        }
+        function P18(){
+            document.getElementById("cambiante").src = "pdf/retopdf2.1.html";
+        }
+    </script>
+</body>
+</html>

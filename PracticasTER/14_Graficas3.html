@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body style="background-color: cornsilk;">
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+    <form id="myform" onsubmit="return grafica();">
+        <p>Inicio: <input id="inicio" name="inicio" type="text" /></p> 
+        <p>Final: <input id="final" name="final" type="text" /></p>
+        <p>Graficar:
+            <select name="opciones">
+                <option value="1">Sin</option>
+                <option value="2">Cos</option>
+                <option value="3">Tan</option>
+            </select>
+        </p>
+        <p><input type="submit" /></p>
+    </form>
+    <script>//hacer con sin, tan y cos
+        function grafica(){
+            var i1= parseInt(document.forms[0].inicio.value); //ParseInt convierte el campo de texto a numerico ´para emplearlo como variable.
+            var f1= parseInt(document.forms[0].final.value);
+            var opc= parseInt(document.forms[0].opciones.value);
+
+            if(i1!=f1 && i1<f1){
+                if(opc==1){
+                    let exp = "Math.sin(x)";
+                    const xValues = [];
+                    const yValues = [];
+                    for (let x=i1; x <= f1; x += 0.1) {
+                        xValues.push(x);
+                        yValues.push(eval(exp));
+                    }
+                    const data = [{x:xValues, y:yValues, mode:"lines"}];
+                    const layout = {title: "y = " + exp};
+                    Plotly.newPlot("myPlot", data, layout);
+                }else if(opc==2){
+                    let exp = "Math.cos(x)";
+                    const xValues = [];
+                    const yValues = [];
+                    for (let x=i1; x <= f1; x += 0.1) {
+                        xValues.push(x);
+                        yValues.push(eval(exp));
+                    }
+                    const data = [{x:xValues, y:yValues, mode:"lines"}];
+                    const layout = {title: "y = " + exp};
+                    Plotly.newPlot("myPlot", data, layout);
+                }else if(opc==3){
+                    let exp = "Math.tan(x)";
+                    const xValues = [];
+                    const yValues = [];
+                    for (let x=i1; x <= f1; x += 0.1) {
+                        xValues.push(x);
+                        yValues.push(eval(exp));
+                    }
+                    const data = [{x:xValues, y:yValues, mode:"lines"}];
+                    const layout = {title: "y = " + exp};
+                    Plotly.newPlot("myPlot", data, layout);
+                }
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

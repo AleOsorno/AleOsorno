@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Bienvenida del usuario</title>
+
+        <style>
+            div{
+                border: 2px solid;
+                border-color: black;
+                text-align: center;
+            }
+        </style>
+
+        <script type = "text/javascript">/*Definimos que pertenece a javaScript*/
+            function alertName() {
+                var p= document.forms[0].Pass.value;/*Forma de definir una variable, no es necesario*/
+                var u= document.forms[0].Usuario.value;
+
+                if(u=="admin" && p=="admin"){
+                    document.write("<table border=1>");
+
+                        document.write("<tr>");
+                        document.write("<td> Usuario: Acceso permitido</td>");
+                        document.write("</tr>");
+                        document.write("<tr>");
+                        document.write("<td> Password: Acceso permitido</td>");
+                        document.write("</tr>");
+
+                    document.write("</table>");
+                }else{
+                    document.write("<table border=1>");
+                    
+                        document.write("<tr>");
+                        document.write("<td> Usuario: Acceso No permitido</td>");
+                        document.write("</tr>");
+                        document.write("<tr>");
+                        document.write("<td> Password: Acceso No permitido</td>");
+                        document.write("</tr>");
+
+                    document.write("</table>");
+                }
+                return true;
+            }
+        </script>
+
+    </head>
+    <body style="background-color: cornsilk;">
+        <div>
+            <h1>Iniciar sesión </h1>
+            <form id="myform" onsubmit="return alertName();">
+                <p>Usuario <input id="Usuario" name="Usuario" type="text" /></p>
+                <p>Password <input id="Pass" name="Pass" type="text" /></p>
+                <p><input type="submit" /></p>
+            </form>
+        </div>
+    </body>
+</html>

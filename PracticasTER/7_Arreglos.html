@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body style="background-color: cornsilk;">
+        <h1>Arreglos</h1>
+        <h2>ordenación</h2>
+        <p>Click en la opcion</p>
+        <button onclick="llenar()">Llenar arreglo</button>
+        <button onclick="imprimir()">Imprimir arreglo</button>
+        <button onclick="ordenar()">Ordenar arreglo</button>
+        <button onclick="reversa()">Reversa arreglo</button>
+        <button onclick="tabla()">Tabla arreglo</button>
+        <p id="demo"></p>
+
+        <script>
+            var arreglo=[0,0,0,0,0,0,0,0,0,0];
+            function llenar() {
+                for(i=0;i<10;i++){
+                    arreglo[i]= Math.floor(Math.random()*100+1);
+                }
+            }
+            function imprimir() {
+                document.getElementById("demo").innerHTML = "El contenido del arreglo: "+arreglo;
+            }
+            function ordenar() {
+                //arreglo = arreglo.sort();
+                arreglo= arreglo.sort(function(a, b){return a-b});
+            }
+            function reversa() {
+                arreglo= arreglo.reverse();
+            }
+            function tabla() {
+                document.write("<table border = 1>");
+                document.write("<tr>");
+                for(i=0;i<10;i++){
+                    document.write("<td>"+arreglo[i]+"</td>");
+                }
+                document.write("</tr>");
+                document.write("</table>");
+            }
+        </script>
+    </body>
+</html>

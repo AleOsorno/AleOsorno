@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: cornsilk;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Juego del Ahorcado</h1>
+        <button onclick="comenzarJuego()">Jugar</button>
+        <button onclick="limpiarPantalla()">Limpiar</button>
+        <form id="formulario">
+            <p>Ingresa la palabra <input id="palabra" type="text" /></p>
+            <p><input type="submit" value="Enviar" /></p>
+        </form>
+        <p id="demo"></p>
+        <p id="PISTA"></p>
+        <hr>
+        <canvas id="lienzo" width="400" height="400"></canvas>
+
+        <script>
+            const canvas = document.getElementById("lienzo");
+            const ctx = canvas.getContext("2d");
+            let ps = "";
+            let f = 0;
+
+            function comenzarJuego() {
+                ps = prompt("Ingresa la palabra a adivinar");
+                mostrarInformacion();
+
+                document.getElementById("formulario").addEventListener("submit", function (event) {//por lo que entiendo es un evento para esperar a que presionemos el boton de enviar
+                event.preventDefault();
+                const pu = document.getElementById("palabra").value;
+                if (pu == ps) {
+                    alert("¡GANASTE!");
+                } else {
+                    f++;
+                    dibujarParteAhorcado();
+                    if (f >= 6) {
+                        alert("Perdiste, la palabra era: " + ps);
+                    }
+                }
+            });
+            }
+
+            function limpiarPantalla() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ps="";
+                f=0;
+                f=0;
+                mostrarInformacion();
+            }
+
+            function mostrarInformacion() {
+                document.getElementById("demo").innerHTML = "<p>La palabra que tienes que encontrar es de " + ps.length + " letras</p>";
+                document.getElementById("PISTA").innerHTML = "<p>Empieza con la letra " + ps[0] + "</p>";
+            }
+
+            function dibujarParteAhorcado() {
+                switch (f) {
+                    case 1:
+                        // Cabeza
+                        ctx.beginPath();
+                        ctx.arc(200, 130, 30, 0, Math.PI * 2);
+                        ctx.stroke();
+                        break;
+                    case 2:
+                        // Cuerpo
+                        ctx.beginPath();
+                        ctx.moveTo(200, 160);
+                        ctx.lineTo(200, 270);
+                        ctx.stroke();
+                        break;
+                    case 3:
+                        // Brazo izquierdo
+                        ctx.beginPath();
+                        ctx.moveTo(200, 180);
+                        ctx.lineTo(150, 220);
+                        ctx.stroke();
+                        break;
+                    case 4:
+                        // Brazo derecho
+                        ctx.beginPath();
+                        ctx.moveTo(200, 180);
+                        ctx.lineTo(250, 220);
+                        ctx.stroke();
+                        break;
+                    case 5:
+                        // Pierna izquierda
+                        ctx.beginPath();
+                        ctx.moveTo(200, 270);
+                        ctx.lineTo(150, 320);
+                        ctx.stroke();
+                        break;
+                    case 6:
+                        // Pierna derecha
+                        ctx.beginPath();
+                        ctx.moveTo(200, 270);
+                        ctx.lineTo(250, 320);
+                        ctx.stroke();
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <body style="background-color: cornsilk;">
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        <script>
+            const xValues = ["Progra 1", "Progra web", "Física 1", "Núcleo","Mate", "Ingles 4"];
+            const yValues = [0,0,0,0,0,0];
+            const barColors = ["black","green","blue","orange","red","gray"];
+            for(i=0;i<6;i++){
+                var num= Math.floor(Math.random()*10)+1;
+                yValues[i]=num;
+            }
+            new Chart("myChart", {
+            type: "bar",
+            data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+            },
+            options: {
+            legend: {display: false},
+            title: {
+            display: true,
+            text: "Parcial 1"
+            }
+            }
+            });
+        </script>
+    </body>
+</html>

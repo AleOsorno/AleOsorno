@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bienvenida del usuario</title>
+        <script type = "text/javascript">/*Definimos que pertenece a javaScript*/
+            function alertName() {
+                var filas1= parseInt(document.forms[0].filas.value);
+                var cols= parseInt(document.forms[0].col.value);/*Forma de definir una variable, no es necesario*/
+                var c= document.forms[0].cara.value;
+
+                document.write("<table border=1>");
+                for(i=1;i<=filas1;i++)
+                {
+                    document.write("<tr>");
+
+                    for(j=1;j<=cols;j++){
+                        document.write("<td>"+c+"</td>");
+                    }
+                    document.write("</tr>");
+                }
+                document.write("</table>");
+                return true;
+            }
+        </script>
+    </head>
+
+    <body style="background-color: cornsilk;">
+        <form id="myform" onsubmit="return alertName();">
+        <p>Filas <input id="filas" name="filas" type="text" /></p>
+        <p>Columnas <input id="col" name="col" type="text" /></p>
+        <p>¿Cual es el caracter que deseas poner? <input id="cara" name="cara" type="text" /></p>
+        <p><input type="submit" /></p>
+        </form>
+    </body>
+</html>
